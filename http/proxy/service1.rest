@@ -1,4 +1,4 @@
-GET http://localhost:5156/web/index.html
+GET http://localhost:80/web/index.html
 
 ###
-GET http://localhost:5156/admin/user
+GET http://localhost:80/admin/user

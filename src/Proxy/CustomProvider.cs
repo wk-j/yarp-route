@@ -15,11 +15,11 @@ public class CustomProvider : IProxyConfigProvider {
                 Match = new RouteMatch {
                     Path = "/web/{**catch-all}"
                 },
-                Transforms = new List<IReadOnlyDictionary<string,string>> {
-                    new Dictionary<string,string> {
-                        ["PathRemovePrefix"] = "/web"
-                    }
-                }
+                // Transforms = new List<IReadOnlyDictionary<string,string>> {
+                //     new Dictionary<string,string> {
+                //         ["PathRemovePrefix"] = "/web"
+                //     }
+                // }
             },
             new RouteConfig {
                 RouteId = "route2",
@@ -27,11 +27,11 @@ public class CustomProvider : IProxyConfigProvider {
                 Match = new RouteMatch {
                     Path = "/admin/{**catch-all}"
                 },
-                Transforms = new List<IReadOnlyDictionary<string,string>> {
-                    new Dictionary<string,string> {
-                        ["PathRemovePrefix"] = "/admin"
-                    }
-                }
+                // Transforms = new List<IReadOnlyDictionary<string,string>> {
+                //     new Dictionary<string,string> {
+                //         ["PathRemovePrefix"] = "/admin"
+                //     }
+                // }
             }
         };
 
@@ -42,7 +42,7 @@ public class CustomProvider : IProxyConfigProvider {
                 Destinations = new Dictionary<string, DestinationConfig> {
                     {
                         "destination1", new DestinationConfig {
-                            Address = "http://localhost:8010/"
+                            Address = "http://web:8010/"
                         }
                     }
                 }
@@ -53,7 +53,7 @@ public class CustomProvider : IProxyConfigProvider {
                 Destinations = new Dictionary<string, DestinationConfig> {
                     {
                         "destination1", new DestinationConfig {
-                            Address = "http://localhost:8020/"
+                            Address = "http://admin:8020/"
                         }
                     }
                 }
