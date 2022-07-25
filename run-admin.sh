@@ -1,0 +1,1 @@
+dotnet run --project src/MyAdmin/MyAdmin.csproj --urls=http://localhost:8020

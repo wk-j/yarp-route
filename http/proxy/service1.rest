@@ -1,0 +1,4 @@
+GET http://localhost:5156/web/index.html
+
+###
+GET http://localhost:5156/admin/user
